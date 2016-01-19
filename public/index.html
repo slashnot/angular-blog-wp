@@ -2,19 +2,41 @@
 <html ng-app="blogApp">
 <head>
     <title>Angular Blog</title>
-	<meta charset="utf-8" />
+    <base href="/" />
+    <meta charset="utf-8" />
     <link href="libs/css/angular-material.min.css" rel="stylesheet" />
 </head>
 <body layout="column" ng-controller="BlogCtrl as blog">
-    <div layout="row">
-        <div flex="25">Sidebar</div>
-        <div flex="75">Main Content</div>
-    </div>
-    
 
-    
+    <!-- Main Toolbar-->
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings">
+                <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            </md-button>
+            <h1>
+                <span>Angular Wordpress Blog</span>
+            </h1>
+            <span flex></span>
+            <md-button ui-sref="home">Home</md-button>
+            <md-button ui-sref="blog">Blog</md-button>
+            <md-button class="md-icon-button" aria-label="More">
+                <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <!-- Dynamic Page Content-->
+    <div layout="row" ui-view>
+
+        
+    </div>
+    <!-- End of Page Content-->
+
     <script src="libs/js/angular.min.js"></script>
-    
+    <script src="libs/js/angular-ui-router.min.js"></script>
+    <script src="libs/js/ocLazyLoad.min.js"></script>
+
     <script src="libs/js/angular-animate.min.js"></script>
     <script src="libs/js/angular-aria.min.js"></script>
     <script src="libs/js/angular-messages.min.js"></script>
