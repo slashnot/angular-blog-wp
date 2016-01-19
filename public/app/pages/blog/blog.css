@@ -1,0 +1,13 @@
+﻿
+.blog-page{
+    z-index:0;
+}
+
+.blog-page-content{
+    z-index:99;
+}
+
+.blog-page .invert .md-list-item-inner{
+    color:#384bb3;
+    font-size:0.8em;
+}

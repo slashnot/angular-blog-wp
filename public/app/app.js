@@ -17,7 +17,12 @@ angular.module("blogApp", ["ngMaterial", "oc.lazyLoad", "ui.router"])
             })
             .state('blog', {
                 url: "/blog",
-                templateUrl: "app/pages/blog/blog.tpl.html"
+                templateUrl: "app/pages/blog/blog.tpl.html",
+                resolve: {
+                    loadBlogCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load(['app/pages/blog/blog.js', 'app/pages/blog/blog.css']);
+                    }]
+                }
             });
         //$locationProvider.html5Mode(true);
     })

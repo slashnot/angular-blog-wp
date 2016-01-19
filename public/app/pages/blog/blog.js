@@ -1,22 +1,26 @@
 ﻿
 (function () {
-    'use strict';
 
-    angular.module('app.blog', [
-        // Angular modules 
-        'oc.lazyload',
-        'ui.router'
-    ])
+    angular.module('app.blog', [])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-
-        $urlRouterProvider.otherwise("/");
 
         // Now set up the states
         $stateProvider
             .state('blog.archive', {
                 url: "/archive",
                 templateUrl: "app/pages/blog/archive.tpl.html"
+            })
+            .state('blog.details', {
+                url: "/archive",
+                templateUrl: "app/pages/blog/details.tpl.html"
+            })
+             .state('blog.category', {
+                 url: "/archive",
+                 templateUrl: "app/pages/blog/category.tpl.html"
+             })
+            .state('blog.authors', {
+                url: "/archive",
+                templateUrl: "app/pages/blog/authors.tpl.html"
             });
-        //$locationProvider.html5Mode(true);
     })
 })();
