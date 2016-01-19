@@ -11,15 +11,15 @@
                 templateUrl: "app/pages/blog/archive.tpl.html"
             })
             .state('blog.details', {
-                url: "/archive",
+                url: "/details",
                 templateUrl: "app/pages/blog/details.tpl.html"
             })
              .state('blog.category', {
-                 url: "/archive",
+                 url: "/category",
                  templateUrl: "app/pages/blog/category.tpl.html"
              })
             .state('blog.authors', {
-                url: "/archive",
+                url: "/authors",
                 templateUrl: "app/pages/blog/authors.tpl.html"
             });
     })
