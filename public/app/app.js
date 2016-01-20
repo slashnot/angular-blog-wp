@@ -3,7 +3,7 @@
  * MAIN ANGULAR APP MODULE
  */
 
-angular.module("blogApp", ["ngMaterial", "oc.lazyLoad", "ui.router"])
+angular.module("blogApp", ["ngMaterial", "oc.lazyLoad", "ui.router", "pluginModule"])
 
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         

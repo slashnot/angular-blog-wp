@@ -1,26 +1,11 @@
 ﻿<!-- Blog PAGE -->
-<div flex="20" class="blog-page">
-    <md-toolbar md-scroll-shrink ng-if="true">
-        <div class="md-toolbar-tools">
-            <h2>Sidebar</h2>
-        </div>
-        <md-content>
-            <md-list class="invert">
-                <md-list-item ui-sref="blog.archive">Archive</md-list-item>
-                <md-list-item ui-sref="blog.details">Posts Details</md-list-item>
-                <md-list-item ui-sref="blog.category">Categories</md-list-item>
-                <md-list-item ui-sref="blog.authors">Authors</md-list-item>
-            </md-list>
-        </md-content>
-    </md-toolbar>
+<div flex="20" class="blog-page" ram-section view="sidebar" group="blog">
+    
 </div>
-<div flex class="md-whiteframe-2dp blog-page-content">
-    <md-content layout-padding>
-        <h2>Blog Page</h2>
-        <ui-view></ui-view>
-    </md-content>
-</div>
-<div flex="5">
+<md-content flex class="md-whiteframe-2dp blog-page-content" layout-padding>  
+    <ram-section view="content" group="blog"></ram-section>
+</md-content>
+<div flex="1">
     <md-toolbar>
         <div class="md-toolbar-tools"> </div>
     </md-toolbar>

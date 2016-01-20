@@ -9,7 +9,7 @@
 <body layout="column" ng-controller="BlogCtrl as blog">
 
     <!-- Main Toolbar-->
-    <md-toolbar flex="5">
+    <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Settings">
                 <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
@@ -27,10 +27,9 @@
     </md-toolbar>
 
     <!-- Dynamic Page Content-->
-    <div layout="row" ui-view flex="95">
-
+    <section layout="row" flex ui-view>
         
-    </div>
+    </section>
     <!-- End of Page Content-->
 
     <script src="libs/js/angular.min.js"></script>
@@ -43,5 +42,6 @@
     <script src="libs/js/angular-material.min.js"></script>
 
     <script src="app/app.js"></script>
+    <script src="app/components/core/plugin-system.js"></script>
 </body>
 </html>
