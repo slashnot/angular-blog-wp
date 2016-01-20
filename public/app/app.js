@@ -63,6 +63,9 @@ angular.module("blogApp", ["ngMaterial", "oc.lazyLoad", "ui.router", "pluginModu
         var templ, scripts;
         return {
             replace: true,
+            controller: ['$scope', function ($scope) {
+                $scope.msg = "Message";
+            }],
             link: function (scope, elm, attrs) {
                 $http.get("app/test.tpl.html").then(function (tpl) {
                     tpl = angular.element(tpl.data);
@@ -72,13 +75,14 @@ angular.module("blogApp", ["ngMaterial", "oc.lazyLoad", "ui.router", "pluginModu
                     //doc.append(scripts);
 
                     var dynScr = document.createElement("script");
-                    //dynScr.src = "libs/js/jquery-2.2.0.min.js";
-                    dynScr.text = "alert('hi')";
+                    dynScr.src = "libs/js/jquery-2.2.0.min.js";
+                    //dynScr.text = "alert('hi')";
                     document.body.appendChild(dynScr);
                     ////
 
                     templ = tpl.find("template");
                     templ = angular.element(templ).html();
+                    console.log(templ);
                     var compiled = $compile(templ)(scope);
                     console.log(compiled);
                     elm.replaceWith(compiled);
