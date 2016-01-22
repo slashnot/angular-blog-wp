@@ -4,7 +4,6 @@
     <title>Angular Blog</title>
     <base href="/" />
     <meta charset="utf-8" />
-    <link href="libs/css/angular-material.min.css" rel="stylesheet" />
 </head>
 <body layout="column" ng-controller="BlogCtrl as blog">
 
@@ -28,23 +27,26 @@
 
     <!-- Dynamic Page Content-->
     
-    <section layout="row" flex ui-view>
+    <section layout="row" flex  af-app template="dash-template">
         
     </section>
     <!-- End of Page Content-->
     
-    <load-dir></load-dir>
-
+    
     <script src="libs/js/angular.min.js"></script>
     <script src="libs/js/angular-ui-router.min.js"></script>
     <script src="libs/js/ocLazyLoad.min.js"></script>
 
-    <script src="libs/js/angular-animate.min.js"></script>
-    <script src="libs/js/angular-aria.min.js"></script>
-    <script src="libs/js/angular-messages.min.js"></script>
-    <script src="libs/js/angular-material.min.js"></script>
+    <!--<span id="af-scripts"></span>-->
+    <!--<script src="libs/js/angular-material.min.js"></script>-->
 
     <script src="app/app.js"></script>
     <script src="app/components/core/plugin-system.js"></script>
+    
+    <!--Scripts to merge with afm.boot-->
+    <script src="app/components/core/afm.template.js"></script>
+    <script src="app/components/core/afm-core.js"></script>
+    <script src="app/components/core/afm.boot.js"></script>
+    <!-- ---------------------------- -->
 </body>
 </html>

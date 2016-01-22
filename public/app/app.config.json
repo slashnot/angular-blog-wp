@@ -1,0 +1,14 @@
+﻿{
+  "app": {
+    "name": "Angular-Wordpress Blog",
+    "version": "0.0.1",
+    "author": "Ramkumar K",
+    "description": "A SPA blog using Angular and Wordpress",
+    "appUrl": "https://github.com/slashnot/angular-blog-wp",
+    "authorUrl": "www.slash0creatives.in"
+  },
+  "template": {
+    "name": "dash-template"
+  }
+
+}

@@ -14,6 +14,10 @@
                 url: "/details",
                 templateUrl: "app/pages/blog/details.tpl.html"
             })
+            .state('blog.details.test', {
+                url: "/test",
+                template: "I am test"
+            })
              .state('blog.category', {
                  url: "/category",
                  templateUrl: "app/pages/blog/category.tpl.html"
@@ -23,4 +27,11 @@
                 templateUrl: "app/pages/blog/authors.tpl.html"
             });
     })
+    .controller("BlogPage", function ($ocLazyLoad,$state,$scope) {
+        $scope.goState = function () {
+            console.log("Blog Page");
+            $state.go("blog.details.test");
+        }
+        
+    });
 })();

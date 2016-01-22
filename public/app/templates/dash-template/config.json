@@ -1,0 +1,15 @@
+﻿{
+  "templateName": "Dashboard Template",
+  "defaultState": "home",
+  "deps": {
+    "scripts": [
+      "libs/js/angular-animate.min.js",
+      "libs/js/angular-aria.min.js",
+      "libs/js/angular-messages.min.js",
+      "app/templates/dash-template/dash-template.js"
+    ],
+    "css": [
+      "libs/css/angular-material.min.css"
+    ]
+  }
+}
