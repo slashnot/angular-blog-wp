@@ -32,7 +32,7 @@
         // Service Function -- afTemplate 
         // ----------------------------------------------------
         function load(template) {
-            var templateInfo;
+
             var d = $q.defer();
             $http.get("app/templates/" + template + "/config.json").then(loadTemplate,
             function (err) {
@@ -43,11 +43,19 @@
             // Template Load Function ------------------
             function loadTemplate(json) {
                 $log.debug(json);
+
+                //Set global values
+                appInfo.template = json.data;
+                appInfo.template.name = template;
+                $log.debug(appInfo);
+                appInfo.template.path = "app/templates/" + template + "/";
+
                 //create a placeholder at boottom of body to load templates
                 var head = document.getElementsByTagName("head");
                 angular.element(document.body).append("<span id='af-scripts'></span>");
                 angular.element(head).append("<span id='af-css'></span>");
 
+                // Lazy Load Files --------------------------------------
                 $ocLazyLoad.load([{
                     files: json.data.deps.css,
                     insertBefore: "#af-css"
@@ -56,12 +64,9 @@
                     serie: true,
                     insertBefore: "#af-scripts"
                 }])
+                // After Loading --------------------------------------
                 .then(function () {
                     console.log($ocLazyLoad.getModules());
-                    var templateName = appInfo.template.name;
-                    appInfo.template = json.data;
-                    appInfo.template.name = templateName;
-                    appInfo.template.path = "app/templates/" + templateName + "/";
                     $log.debug("Core Dependencies loaded");
 
                     //Load state changes
@@ -72,6 +77,7 @@
                     $log.error("Error loading app dependencies. Please check whether the files exist");
                     d.reject();
                 });
+                // ------------------------------------------------------
 
                 //Load state Changes function
                 function loadStates() {
@@ -87,9 +93,6 @@
                             state = state.replace(/\//g, ".");
                             $state.go(state);
                         });
-                        
-                        $log.debug($state);
-                        
                     }
                 }
             }

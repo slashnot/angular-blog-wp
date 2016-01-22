@@ -13,5 +13,7 @@ angular.module("blogApp", ["afm.boot"])
 
     }]);
 angular.element(document).ready(function () {
-    console.log("Ready")
+    console.log("Ready");
+    angular.module("testApp", []);
+    angular.module("testApp1", ["testApp"]);
 });

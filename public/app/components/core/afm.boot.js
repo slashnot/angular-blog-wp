@@ -37,7 +37,7 @@
             },
             priority: 99,
             template: "<ui-view></ui-view",
-            replace:true,
+            replace: true,
             link: afLink
         }
 
@@ -56,8 +56,6 @@
             // Template Load Function ------------------
             function loadTemplate(json) {
                 appInfo = json.data;
-                $log.debug(appInfo);
-
 
                 //Check whether the template is defined
                 if (scope.template !== null || scope.template !== undefined) {
@@ -74,11 +72,6 @@
                 else {
                     //afMessage.error("Template not defined.");
                 }
-            }
-
-            // States Load Function ------------------
-            function loadState() {
-                console.log(appInfo);
             }
         }
         return afApp;

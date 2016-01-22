@@ -6,10 +6,10 @@
       "app/templates/dash-template/dash-template.js"
     ],
     "css": [
-      "app/templates/dash-template/assets/css/bootstrap.min.css",
-      "app/templates/dash-template/assets/css/animate.min.css",
-      "app/templates/dash-template/assets/css/light-bootstrap-dashboard.css",
-      "app/templates/dash-template/assets/css/demo.css"
+      "assets/dash-template/css/bootstrap.min.css",
+      "assets/dash-template/css/animate.min.css",
+      "assets/dash-template/css/light-bootstrap-dashboard.css",
+      "assets/dash-template/css/demo.css"
     ]
   }
 }
