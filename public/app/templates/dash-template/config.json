@@ -3,13 +3,17 @@
   "defaultState": "home",
   "deps": {
     "scripts": [
-      "libs/js/angular-animate.min.js",
-      "libs/js/angular-aria.min.js",
-      "libs/js/angular-messages.min.js",
+      "app/templates/dash-template/assets/js/bootstrap.min.js",
+      "app/templates/dash-template/assets/js/bootstrap-checkbox-radio-switch.js",
+      "app/templates/dash-template/assets/js/bootstrap-notify.js",
+      "app/templates/dash-template/assets/js/demo.js",
       "app/templates/dash-template/dash-template.js"
     ],
     "css": [
-      "libs/css/angular-material.min.css"
+      "app/templates/dash-template/assets/css/bootstrap.min.css",
+      "app/templates/dash-template/assets/css/animate.min.css",
+      "app/templates/dash-template/assets/css/light-bootstrap-dashboard.css",
+      "app/templates/dash-template/assets/css/demo.css"
     ]
   }
 }

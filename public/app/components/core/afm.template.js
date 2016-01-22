@@ -58,7 +58,10 @@
                 }])
                 .then(function () {
                     console.log($ocLazyLoad.getModules());
+                    var templateName = appInfo.template.name;
                     appInfo.template = json.data;
+                    appInfo.template.name = templateName;
+                    appInfo.template.path = "app/templates/" + templateName + "/";
                     $log.debug("Core Dependencies loaded");
 
                     //Load state changes
