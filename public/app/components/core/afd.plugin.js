@@ -2,9 +2,9 @@
 (function () {
     'use strict';
 
-    angular.module('pluginModule', [])
+    angular.module('af.core')
 
-    .directive('ramWidget', ['$compile', '$ocLazyLoad', '$templateRequest', function ($compile, $ocLazyLoad, $templateRequest) {
+    .directive('afWidget', ['$compile', '$ocLazyLoad', '$templateRequest', function ($compile, $ocLazyLoad, $templateRequest) {
         return {
             restrict: 'EA',
             scope: {
@@ -22,7 +22,7 @@
             }
         };
     }])
-    .directive('ramSection', ['$compile', '$ocLazyLoad', '$templateRequest', function ($compile, $ocLazyLoad, $templateRequest) {
+    .directive('afSection', ['$compile', '$ocLazyLoad', '$templateRequest', function ($compile, $ocLazyLoad, $templateRequest) {
         return {
             restrict: 'EA',
             scope: {

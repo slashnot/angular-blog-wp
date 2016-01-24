@@ -7,10 +7,8 @@
 (function () {
     'use strict';
 
-    angular.module('afm.boot', ["afm.template", "ui.router", "pluginModule"]);
-
     //Config Function
-    angular.module('afm.boot')
+    angular.module('af.boot')
     .config(["$provide", function ($provide) {
         $provide.value("appInfo", {
             app: {},
@@ -19,7 +17,7 @@
     }]);
 
     //Directive that loads the required template files and replace the DOM element with ui-view
-    angular.module('afm.boot')
+    angular.module('af.boot')
     .directive("afApp", afApp);
     afApp.$inject = ["$log", "appInfo", "$http", "afTemplate"];
 

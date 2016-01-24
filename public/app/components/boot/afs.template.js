@@ -8,7 +8,7 @@
     'use strict';
 
     angular
-      .module('afm.template', ["oc.lazyLoad"])
+      .module('af.boot')
       .factory('afTemplate', afTemplate);
 
     afTemplate.$inject = [
