@@ -1,0 +1,12 @@
+﻿{
+  "templateName": "Dashboard Template",
+  "defaultState": "home",
+  "deps": {
+    "scripts": [
+      "app/templates/material/material.js"
+    ],
+    "css": [
+      "app/templates/material/libs/css/angular-material.min.css"
+    ]
+  }
+}

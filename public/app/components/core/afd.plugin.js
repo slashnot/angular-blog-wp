@@ -8,16 +8,27 @@
         return {
             restrict: 'EA',
             scope: {
-                'widget': '@'
+                widget: '@',
+                widgetNamespace: '@'
             },
             priority: 1,
-            link: function (scope, element) {
+            link: function (scope, elm, attrs) {
 
                 $ocLazyLoad.load('app/widgets/' + scope.widget + '/' + scope.widget + '.widget.js')
                     .then(function () {
-                        var template = '<' + scope.widget + '></' + scope.widget + '>';
+                        var template = angular.element('<' + scope.widget + '></' + scope.widget + '>');
+                        var namespace = "widget";
+
+                        //Add all the attributes defined in the element
+                        angular.forEach(attrs, function (val, attr) {
+                            if (angular.isString(val)) {
+                                if (attr.indexOf(namespace) >= 0) {
+                                    template.attr(attrs.$attr[attr], val);
+                                }
+                            }
+                        });
                         var compiled = $compile(template)(scope);
-                        element.append(compiled);
+                        elm.append(compiled);
                     });
             }
         };
@@ -31,9 +42,9 @@
             },
             priority: 2,
             link: function (scope, element) {
-                var template,compiled;
+                var template, compiled;
                 if (scope.group != undefined) {
-                    template = "<div ng-include=\"'app/sections/" + scope.group +"/" +scope.view + ".section.html'\"></div>";
+                    template = "<div ng-include=\"'app/sections/" + scope.group + "/" + scope.view + ".section.html'\"></div>";
                 }
                 else {
                     template = "<div ng-include=\"'app/sections/" + scope.view + ".section.html'\"></div>";

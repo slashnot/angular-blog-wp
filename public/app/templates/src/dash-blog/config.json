@@ -1,0 +1,21 @@
+﻿{
+  "templateName": "Dashboard Template",
+  "defaultState": "home",
+  "deps": {
+    "scripts": [
+      "app/templates/dash-blog/assets/js/jquery-1.10.2.js",
+      "app/templates/dash-blog/assets/js/bootstrap.min.js",
+      "app/templates/dash-blog/assets/js/bootstrap-checkbox-radio-switch.js",
+      "app/templates/dash-blog/assets/js/bootstrap-notify.js",
+      "app/templates/dash-blog/assets/js/light-bootstrap-dashboard.js",
+      "app/templates/dash-blog/assets/js/demo.js",
+      "app/templates/dash-blog/dash-blog.js"
+    ],
+    "css": [
+      "app/templates/dash-blog/assets/css/bootstrap.min.css",
+      "app/templates/dash-blog/assets/css/animate.min.css",
+      "app/templates/dash-blog/assets/css/light-bootstrap-dashboard.css",
+      "app/templates/dash-blog/assets/css/demo.css"
+    ]
+  }
+}

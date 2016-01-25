@@ -1,0 +1,22 @@
+﻿<!-- Main Toolbar-->
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+        <h1>
+            <span>Angular Wordpress Blog</span>
+        </h1>
+        <span flex></span>
+        <md-button ui-sref="home">Home</md-button>
+        <md-button ui-sref="blog">Blog</md-button>
+        <md-button class="md-icon-button" aria-label="More">
+            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<!-- Dynamic Page Content-->
+
+<section layout="row" flex ui-view></section>
+<!-- End of Page Content-->

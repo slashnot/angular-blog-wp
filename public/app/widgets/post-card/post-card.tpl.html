@@ -1,0 +1,29 @@
+﻿<div class="col-md-4 post-card widget">
+    <div class="card">
+        <div class="image">
+            <img ng-src="{{card.posts.thumbnail_url}}" />
+            {{card.posts.thumbnail_url}}
+        </div>
+        <div class="header">
+            <h4 class="title">
+                <a ui-sref="post({id: '{{card.posts.id}}'})" ng-bind-html="card.posts.title.rendered"></a>
+            </h4>
+            <p class="category">Category Name</p>
+        </div>
+        <div class="content">
+            <p ng-bind-html="card.posts.excerpt.rendered"></p>
+            <div class="footer">
+                <div class="legend">
+                    <i class="fa fa-circle text-info"></i> Tag1
+                    <i class="fa fa-circle text-danger"></i> Tag2
+                    <i class="fa fa-circle text-warning"></i> Tag3
+                </div>
+                <hr>
+                <div class="stats">
+                    <i class="fa fa-clock-o"></i> Author Info
+                    <i class="fa fa-clock-o"></i> Date and Time
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,22 +7,26 @@
 </head>
 <body ng-controller="BlogCtrl as blog">
 
-    <div af-app template="dash-template"></div>
-    
+    <div af-app template="dash-blog"></div>
+    <!--<div ui-view></div>-->
     <!-- End of Page Content-->
+    <script src="libs/js/jquery-2.2.0.min.js"></script>
     <script src="libs/js/angular.min.js"></script>
     <script src="libs/js/angular-ui-router.min.js"></script>
     <script src="libs/js/angular-resource.min.js"></script>
     <script src="libs/js/ocLazyLoad.min.js"></script>
+    <script src="libs/js/wp-api-angularjs.min.js"></script>
+    <script src="libs/js/angular-sanitize.min.js"></script>
     <script src="app/app.js"></script>
 
     <!--Scripts to merge with af.boot-->
     <script src="app/components/boot/af.boot.js"></script>
-    <script src="app/components/boot/afs.init.js"></script>
+    <script src="app/components/boot/afd.init.js"></script>
     <script src="app/components/boot/afs.template.js"></script>
+
+    <!--Scripts to merge with af.core-->
     <script src="app/components/core/af.core.js"></script>
     <script src="app/components/core/afd.plugin.js"></script>
-
     <!-- ---------------------------- -->
 </body>
 </html>

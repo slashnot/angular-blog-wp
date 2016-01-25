@@ -10,6 +10,7 @@
     'use strict';
 
     angular.module('af.core', [
-        "oc.lazyLoad"
+        "oc.lazyLoad",
+        "ngSanitize"
     ]);
 })();
