@@ -4,6 +4,8 @@
   "deps": {
     "scripts": [
       "app/templates/dash-blog/assets/js/bootstrap.min.js",
+      "app/templates/dash-blog/assets/js/bootstrap-checkbox-radio-switch.js",
+      "app/templates/dash-blog/assets/js/bootstrap-notify.js",
       "app/templates/dash-blog/assets/js/demo.js",
       "app/templates/dash-blog/dash-blog.js"
     ],
@@ -12,6 +14,8 @@
       "app/templates/dash-blog/assets/css/animate.min.css",
       "app/templates/dash-blog/assets/css/light-bootstrap-dashboard.css",
       "app/templates/dash-blog/assets/css/demo.css",
+      "https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css",
+      "https://fonts.googleapis.com/css?family=Roboto:400,700,300",
       "app/templates/dash-blog/assets/css/pe-icon-7-stroke.css"
     ]
   }
