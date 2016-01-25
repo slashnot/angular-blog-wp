@@ -39,16 +39,12 @@
         'use strict';
         angular.module('post.card')
               .controller('PostCard', PostCard);
-        PostCard.$inject = ['$scope', '$sce'];
+        PostCard.$inject = ['$scope'];
 
-        function PostCard($scope, $sce) {
+        function PostCard($scope) {
             /* jshint validthis:true */
             var card = this;
             card.posts = $scope.widgetData;
-
-            card.getHtml = function(raw){
-                return $sce.trustAsHtml(raw);
-            }
         }
     })();
 

@@ -1,0 +1,46 @@
+﻿<div class="container-fluid widget post-details">
+    <div class="post-image">
+        <img ng-src="{{detail.thumbnail_url}}" />
+    </div>
+    <div class="post content">
+        <div class="card">
+            <div class="header">
+                <h1 class="title" ng-bind-html="detail.title.rendered">
+                    <br />
+                    <small>Created using Roboto Font Family</small>
+                </h1>
+                <h2></h2>
+            </div>
+            <hr />
+            <div class="content" ng-bind-html="detail.content.rendered"> 
+                <p>
+                    The get() function in the above snippet issues a GET request to /api/entries/:id. The parameter :id in the URL is replaced with $scope.id. You should also note that the function get() returns an empty object which is populated automatically when the actual data comes from server. The second argument to get() is a callback which is executed when the data arrives from server. This is a useful trick because you can set the empty object returned by get() to the $scope and refer to it in the view. When the actual data arrives and the object is populated, the data binding kicks in and your view is also updated.
+                </p>
+                <af-widget widget="test01"></af-widget>
+                <blockquote>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                    </p>
+                    <small>
+                        Steve Jobs, CEO Apple
+                    </small>
+                </blockquote>
+                <p>
+                    The get() function in the above snippet issues a GET request to /api/entries/:id. The parameter :id in the URL is replaced with $scope.id. You should also note that the function get() returns an empty object which is populated automatically when the actual data comes from server. The second argument to get() is a callback which is executed when the data arrives from server. This is a useful trick because you can set the empty object returned by get() to the $scope and refer to it in the view. When the actual data arrives and the object is populated, the data binding kicks in and your view is also updated.
+                </p>
+                <div class="footer">
+                    <div class="legend">
+                        <i class="fa fa-circle text-info"></i> Tag1
+                        <i class="fa fa-circle text-danger"></i> Tag2
+                        <i class="fa fa-circle text-warning"></i> Tag3
+                    </div>
+                    <hr>
+                    <div class="stats">
+                        <i class="fa fa-clock-o"></i> Author Info
+                        <i class="fa fa-clock-o"></i> Date and Time
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

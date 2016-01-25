@@ -16,7 +16,8 @@
             })
             .state('post', {
                 url: "/post/:id",
-                templateUrl: "app/templates/dash-blog/single.html"
+                templateUrl: "app/templates/dash-blog/single.html",
+                controller: "DetailController"
             })
             .state('post.archive', {
                 url: "/archive",
@@ -30,9 +31,14 @@
 
     //WP API Config
     .config(function (WpApiProvider) {
-        WpApiProvider.setBaseUrl("http://127.0.0.1/WORKS/Wp-Angular/wp-json/");
+        WpApiProvider.setBaseUrl("https://angularwpapi-slashnot.rhcloud.com/wp-json/");
         WpApiProvider.setDefaultHttpProperties({
             timeout: 20000
         });
-    });
+    })
+    .controller("DetailController", ["$scope","$stateParams", function ($scope,$stateParams) {
+        $scope.getPostId = function () {
+            return $stateParams.id;
+        };
+    }]);
 })();
