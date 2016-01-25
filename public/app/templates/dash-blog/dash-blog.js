@@ -31,7 +31,7 @@
 
     //WP API Config
     .config(function (WpApiProvider) {
-        WpApiProvider.setBaseUrl("https://angularwpapi-slashnot.rhcloud.com/wp-json/");
+        WpApiProvider.setBaseUrl("https://angularblogapi-slashnot.rhcloud.com/wp-json/");
         WpApiProvider.setDefaultHttpProperties({
             timeout: 20000
         });
